@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,12 +23,12 @@ export default function Home() {
           Mint your purchases as NFT and track their authenticity
         </p>
         <div className="flex flex-row">
-          <button className="bg-blue-600 text-white font-bold py-2 px-4 mx-2 rounded mt-4">
+          <Link href={'./customer'}><button className="bg-blue-600 text-white font-bold py-2 px-4 mx-2 rounded mt-4">
             Login as Customer
-          </button>
-          <button className="bg-blue-600 text-white font-bold py-2 px-4 mx-2 rounded mt-4">
+          </button></Link>
+          <Link href={'./admin'}><button className="bg-blue-600 text-white font-bold py-2 px-4 mx-2 rounded mt-4">
             Login as Merchant
-          </button>
+          </button></Link>
         </div>
       </div>
     </>
